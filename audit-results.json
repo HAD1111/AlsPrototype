@@ -1,0 +1,1019 @@
+﻿{
+  "summary": {
+    "totalTests": 56,
+    "passed": 56,
+    "failed": 0,
+    "zeroOverflowConfirmed": true,
+    "timestamp": "2026-09-12T17:33:21.140Z"
+  },
+  "results": [
+    {
+      "page": "index.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 686px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 716px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 746px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 33,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 33,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 33,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2822px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 686px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 716px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 746px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "shop.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2822px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 31,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 686px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 716px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 746px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "product.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 32,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2822px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 692px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 722px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 752px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "wishlist.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2828px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 692px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 722px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 752px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "cart.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2828px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 27,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 692px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 722px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 752px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 28,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2828px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "320x568 (iPhone SE)",
+      "width": 320,
+      "height": 568,
+      "innerW": 320,
+      "scrollW": 314,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 29,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 628px &gt; 320px)",
+        "div.mobile-drawer-header (right: 606px &gt; 320px)",
+        "div.nav-brand (right: 442px &gt; 320px)",
+        "img.nav-brand-logo (right: 356px &gt; 320px)",
+        "div.nav-brand-text (right: 442px &gt; 320px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "360x800 (Galaxy S)",
+      "width": 360,
+      "height": 800,
+      "innerW": 360,
+      "scrollW": 354,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 29,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 708px &gt; 360px)",
+        "div.mobile-drawer-header (right: 692px &gt; 360px)",
+        "div.nav-brand (right: 482px &gt; 360px)",
+        "img.nav-brand-logo (right: 396px &gt; 360px)",
+        "div.nav-brand-text (right: 482px &gt; 360px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "375x812 (iPhone X/11)",
+      "width": 375,
+      "height": 812,
+      "innerW": 375,
+      "scrollW": 369,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 738px &gt; 375px)",
+        "div.mobile-drawer-header (right: 722px &gt; 375px)",
+        "div.nav-brand (right: 512px &gt; 375px)",
+        "img.nav-brand-logo (right: 420px &gt; 375px)",
+        "div.nav-brand-text (right: 512px &gt; 375px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "390x844 (iPhone 12/13/14)",
+      "width": 390,
+      "height": 844,
+      "innerW": 390,
+      "scrollW": 384,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 768px &gt; 390px)",
+        "div.mobile-drawer-header (right: 752px &gt; 390px)",
+        "div.nav-brand (right: 527px &gt; 390px)",
+        "img.nav-brand-logo (right: 435px &gt; 390px)",
+        "div.nav-brand-text (right: 527px &gt; 390px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "412x915 (Pixel 7)",
+      "width": 412,
+      "height": 915,
+      "innerW": 412,
+      "scrollW": 406,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 812px &gt; 412px)",
+        "div.mobile-drawer-header (right: 796px &gt; 412px)",
+        "div.nav-brand (right: 549px &gt; 412px)",
+        "img.nav-brand-logo (right: 458px &gt; 412px)",
+        "div.nav-brand-text (right: 549px &gt; 412px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "768x1024 (iPad Portrait)",
+      "width": 768,
+      "height": 1024,
+      "innerW": 768,
+      "scrollW": 762,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 1524px &gt; 768px)",
+        "div.mobile-drawer-header (right: 1493px &gt; 768px)",
+        "div.nav-brand (right: 943px &gt; 768px)",
+        "img.nav-brand-logo (right: 828px &gt; 768px)",
+        "div.nav-brand-text (right: 943px &gt; 768px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "1024x768 (iPad Landscape)",
+      "width": 1024,
+      "height": 768,
+      "innerW": 1024,
+      "scrollW": 1018,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2036px &gt; 1024px)",
+        "div.mobile-drawer-header (right: 1990px &gt; 1024px)",
+        "div.nav-brand (right: 1208px &gt; 1024px)",
+        "img.nav-brand-logo (right: 1093px &gt; 1024px)",
+        "div.nav-brand-text (right: 1208px &gt; 1024px)"
+      ]
+    },
+    {
+      "page": "contact.html",
+      "viewport": "1440x900 (Desktop HD)",
+      "width": 1440,
+      "height": 900,
+      "innerW": 1440,
+      "scrollW": 1434,
+      "overflowPx": 0,
+      "pass": true,
+      "offendingCount": 30,
+      "offending": [
+        "div#mobileDrawer.mobile-drawer (right: 2868px &gt; 1440px)",
+        "div.mobile-drawer-header (right: 2828px &gt; 1440px)",
+        "div.nav-brand (right: 1624px &gt; 1440px)",
+        "img.nav-brand-logo (right: 1509px &gt; 1440px)",
+        "div.nav-brand-text (right: 1624px &gt; 1440px)"
+      ]
+    }
+  ]
+}

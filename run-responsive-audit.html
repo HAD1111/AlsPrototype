@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALMASA Responsive Audit Runner</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #f0f0f0; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #444; padding: 8px 12px; text-align: left; }
+        th { background: #2a2a2a; }
+        .pass { color: #4ade80; font-weight: bold; }
+        .fail { color: #f87171; font-weight: bold; }
+        iframe { border: 1px solid #555; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>ALMASA Prototype - Responsive Design Audit (56 Matrix Tests)</h1>
+    <div id="status">Starting audit...</div>
+    <div id="iframeContainer"></div>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Page</th>
+                <th>Viewport</th>
+                <th>innerWidth</th>
+                <th>scrollWidth</th>
+                <th>Overflow</th>
+                <th>Status</th>
+                <th>Offending Elements</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+    </table>
+    <pre id="jsonResult" style="margin-top: 20px; background: #111; padding: 15px;"></pre>
+
+    <script>
+    const PAGES = [
+        'index.html',
+        'shop.html',
+        'product.html',
+        'wishlist.html',
+        'cart.html',
+        'about.html',
+        'contact.html'
+    ];
+
+    const VIEWPORTS = [
+        { width: 320, height: 568, name: '320x568 (iPhone SE)' },
+        { width: 360, height: 800, name: '360x800 (Galaxy S)' },
+        { width: 375, height: 812, name: '375x812 (iPhone X/11)' },
+        { width: 390, height: 844, name: '390x844 (iPhone 12/13/14)' },
+        { width: 412, height: 915, name: '412x915 (Pixel 7)' },
+        { width: 768, height: 1024, name: '768x1024 (iPad Portrait)' },
+        { width: 1024, height: 768, name: '1024x768 (iPad Landscape)' },
+        { width: 1440, height: 900, name: '1440x900 (Desktop HD)' }
+    ];
+
+    const results = [];
+    const resultsBody = document.getElementById('resultsBody');
+    const statusDiv = document.getElementById('status');
+    const iframeContainer = document.getElementById('iframeContainer');
+
+    function testPageAtViewport(page, vp) {
+        return new Promise((resolve) => {
+            iframeContainer.innerHTML = '';
+            const iframe = document.createElement('iframe');
+            iframe.style.width = vp.width + 'px';
+            iframe.style.height = vp.height + 'px';
+            iframe.src = page;
+            iframeContainer.appendChild(iframe);
+
+            iframe.onload = () => {
+                setTimeout(() => {
+                    try {
+                        const win = iframe.contentWindow;
+                        const doc = iframe.contentDocument || win.document;
+                        const innerW = win.innerWidth;
+                        const scrollW = doc.documentElement.scrollWidth;
+                        const bodyScrollW = doc.body.scrollWidth;
+                        const maxScrollW = Math.max(scrollW, bodyScrollW);
+
+                        const overflowPx = Math.max(0, maxScrollW - innerW);
+                        const isPass = overflowPx <= 1;
+
+                        const offending = [];
+                        const allEls = doc.querySelectorAll('*');
+                        allEls.forEach(el => {
+                            if (el.tagName === 'HTML' || el.tagName === 'BODY' || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
+                            const rect = el.getBoundingClientRect();
+                            if (rect.width > 0 && rect.right > innerW + 1.5) {
+                                const id = el.id ? '#' + el.id : '';
+                                const cls = el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0,2).join('.') : '';
+                                offending.push(`${el.tagName.toLowerCase()}${id}${cls} (right: ${Math.round(rect.right)}px > ${innerW}px)`);
+                            }
+                        });
+
+                        const res = {
+                            page,
+                            viewport: vp.name,
+                            width: vp.width,
+                            height: vp.height,
+                            innerW,
+                            scrollW: maxScrollW,
+                            overflowPx,
+                            pass: isPass,
+                            offendingCount: offending.length,
+                            offending: offending.slice(0, 5)
+                        };
+
+                        resolve(res);
+                    } catch (e) {
+                        resolve({
+                            page,
+                            viewport: vp.name,
+                            width: vp.width,
+                            height: vp.height,
+                            innerW: vp.width,
+                            scrollW: -1,
+                            overflowPx: -1,
+                            pass: false,
+                            offending: ['Error: ' + e.message]
+                        });
+                    }
+                }, 180);
+            };
+        });
+    }
+
+    async function runAllAudits() {
+        let passedCount = 0;
+        let failedCount = 0;
+
+        for (let i = 0; i < PAGES.length; i++) {
+            const page = PAGES[i];
+            for (let j = 0; j < VIEWPORTS.length; j++) {
+                const vp = VIEWPORTS[j];
+                statusDiv.textContent = `Testing (${results.length + 1}/${PAGES.length * VIEWPORTS.length}): ${page} at ${vp.name}...`;
+                const res = await testPageAtViewport(page, vp);
+                results.push(res);
+
+                if (res.pass) passedCount++;
+                else failedCount++;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${res.page}</td>
+                    <td>${res.viewport}</td>
+                    <td>${res.innerW}px</td>
+                    <td>${res.scrollW}px</td>
+                    <td>${res.overflowPx}px</td>
+                    <td class="${res.pass ? 'pass' : 'fail'}">${res.pass ? 'PASS' : 'FAIL'}</td>
+                    <td>${res.offending && res.offending.length > 0 ? res.offending.join('; ') : 'None'}</td>
+                `;
+                resultsBody.appendChild(row);
+            }
+        }
+
+        iframeContainer.innerHTML = '';
+        const summary = {
+            totalTests: results.length,
+            passed: passedCount,
+            failed: failedCount,
+            zeroOverflowConfirmed: failedCount === 0,
+            timestamp: new Date().toISOString()
+        };
+
+        statusDiv.innerHTML = `<h2>AUDIT COMPLETE: ${passedCount}/${results.length} PASSED ${failedCount === 0 ? '<span class="pass">(100% ZERO OVERFLOW)</span>' : '<span class="fail">(' + failedCount + ' FAILED)</span>'}</h2>`;
+        document.getElementById('jsonResult').textContent = JSON.stringify({ summary, results }, null, 2);
+        window.AUDIT_COMPLETE = true;
+        window.AUDIT_SUMMARY = summary;
+    }
+
+    window.addEventListener('load', runAllAudits);
+    </script>
+</body>
+</html>

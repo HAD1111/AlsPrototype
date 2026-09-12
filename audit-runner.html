@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head><title>Audit Runner</title></head>
+<body>
+<div id="output">Running audit...</div>
+<iframe id="testFrame" style="border:0; position:absolute; top:0; left:0; visibility:hidden;"></iframe>
+<script>
+const pages = ['index.html', 'shop.html', 'product.html', 'wishlist.html', 'cart.html', 'about.html', 'contact.html'];
+const viewports = [
+    { w: 320, h: 568 },
+    { w: 360, h: 800 },
+    { w: 375, h: 812 },
+    { w: 390, h: 844 },
+    { w: 412, h: 915 },
+    { w: 768, h: 1024 },
+    { w: 1024, h: 768 },
+    { w: 1440, h: 900 }
+];
+
+const report = [];
+
+async function run() {
+    const frame = document.getElementById('testFrame');
+    
+    for (const page of pages) {
+        for (const vp of viewports) {
+            frame.style.width = vp.w + 'px';
+            frame.style.height = vp.h + 'px';
+            
+            await new Promise(resolve => {
+                frame.onload = resolve;
+                frame.src = page + '?v=' + Date.now();
+            });
+            
+            // Allow scripts to render
+            await new Promise(r => setTimeout(r, 400));
+            
+            const doc = frame.contentDocument;
+            const win = frame.contentWindow;
+            
+            const scrollWidth = doc.documentElement.scrollWidth;
+            const bodyScrollWidth = doc.body ? doc.body.scrollWidth : 0;
+            const innerWidth = win.innerWidth;
+            const maxScroll = Math.max(scrollWidth, bodyScrollWidth);
+            const hasHorizontalOverflow = maxScroll > innerWidth + 1;
+            
+            // Find elements overflowing the viewport
+            const overflows = [];
+            const smallTouchTargets = [];
+            
+            doc.querySelectorAll('*').forEach(el => {
+                if (el.offsetWidth === 0 && el.offsetHeight === 0) return;
+                const rect = el.getBoundingClientRect();
+                if (rect.right > innerWidth + 1) {
+                    overflows.push({
+                        tag: el.tagName,
+                        cls: (el.className && typeof el.className === 'string') ? el.className.trim() : '',
+                        id: el.id || '',
+                        right: Math.round(rect.right),
+                        width: Math.round(rect.width)
+                    });
+                }
+                
+                // Check clickable touch targets on mobile (< 768px)
+                if (vp.w < 768 && (el.tagName === 'BUTTON' || (el.tagName === 'A' && el.href))) {
+                    if (rect.width > 0 && rect.height > 0 && (rect.width < 40 || rect.height < 40)) {
+                        smallTouchTargets.push({
+                            tag: el.tagName,
+                            cls: (el.className && typeof el.className === 'string') ? el.className.trim() : '',
+                            id: el.id || '',
+                            text: (el.textContent || '').trim().substring(0, 20),
+                            w: Math.round(rect.width),
+                            h: Math.round(rect.height)
+                        });
+                    }
+                }
+            });
+            
+            report.push({
+                page,
+                viewport: vp.w + 'x' + vp.h,
+                hasHorizontalOverflow,
+                innerWidth,
+                maxScroll,
+                overflowCount: overflows.length,
+                overflowSample: overflows.slice(0, 4),
+                smallTouchCount: smallTouchTargets.length,
+                smallTouchSample: smallTouchTargets.slice(0, 4)
+            });
+        }
+    }
+    
+    document.getElementById('output').textContent = JSON.stringify(report, null, 2);
+    console.log('AUDIT_COMPLETE');
+}
+
+window.onload = run;
+</script>
+</body>
+</html>

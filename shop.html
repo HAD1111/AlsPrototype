@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collection | ALMASA Jewelry</title>
+    <meta name="description" content="Browse the complete catalog of ALMASA 18K solid gold fine jewelry: rings, necklaces, earrings, bracelets, chains, and watches.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/elmasa-logo.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="ALMASA Jewelry Home">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="shop.html" class="nav-link active">Collections</a></li>
+                    <li><a href="shop.html?filter=new" class="nav-link">New Arrivals</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="about.html#craftsmanship" class="nav-link">Journal</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn search-trigger" aria-label="Search Jewelry" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="wishlist.html" class="nav-action-btn" aria-label="View Wishlist" title="Saved Pieces">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="nav-action-badge wishlist-badge" id="wishlistBadge">0</span>
+                </a>
+                <a href="cart.html" class="nav-action-btn" aria-label="Shopping Bag" title="Shopping Bag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="nav-action-badge cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Open Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="nav-brand">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </div>
+            <button class="mobile-drawer-close" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="shop.html" class="mobile-nav-link active">Collections</a></li>
+            <li><a href="shop.html?filter=new" class="mobile-nav-link">New Arrivals</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About ALMASA</a></li>
+            <li><a href="about.html#craftsmanship" class="mobile-nav-link">The Craftsmanship</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Private Concierge</a></li>
+            <li><a href="wishlist.html" class="mobile-nav-link">Saved Pieces</a></li>
+            <li><a href="cart.html" class="mobile-nav-link">Shopping Bag</a></li>
+        </ul>
+
+        <div class="mobile-drawer-footer">
+            <div class="mobile-drawer-contact">
+                <p>Private Showroom & Concierge</p>
+                <a href="#" data-config="phone">+961 1 985 420</a>
+                <a href="#" data-config="whatsapp">WhatsApp Concierge</a>
+            </div>
+            <p>&copy; <span class="current-year"></span> ALMASA Jewelry. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Search Drawer -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search fine jewelry, gold, stones..." autocomplete="off">
+                <button id="searchClose" class="search-close-btn" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchResultsArea" class="search-results-area"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Shop Header & Breadcrumb -->
+        <section class="shop-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span id="breadcrumbCurrent">The Collection</span>
+                </nav>
+                <span class="eyebrow">HAUTE JOAILLERIE &bull; 18K SOLID GOLD</span>
+                <h1 id="shopPageTitle" style="font-size: clamp(2rem, 4.5vw, 3.8rem); font-weight: 300;">The Collection</h1>
+                <p class="section-subtitle" id="shopPageSubtitle" style="max-width: 620px; margin: 0.65rem auto 0;">
+                    Sculpted in pure 18K gold. An enduring dialogue between Mediterranean heritage and modern editorial refinement.
+                </p>
+            </div>
+        </section>
+
+        <!-- Desktop Sticky Filter Bar -->
+        <section class="shop-filter-bar">
+            <div class="container filter-bar-inner">
+                <div class="filter-categories" id="categoryPills">
+                    <button class="filter-pill active" data-category="All">All Pieces</button>
+                    <button class="filter-pill" data-category="Rings">Rings</button>
+                    <button class="filter-pill" data-category="Necklaces">Necklaces</button>
+                    <button class="filter-pill" data-category="Bracelets">Bracelets</button>
+                    <button class="filter-pill" data-category="Earrings">Earrings</button>
+                    <button class="filter-pill" data-category="Chains">Chains</button>
+                    <button class="filter-pill" data-category="Watches">Fine Watches</button>
+                </div>
+
+                <div class="filter-controls">
+                    <!-- Material Filter -->
+                    <select id="filterMaterial" class="filter-select" aria-label="Filter by Material">
+                        <option value="All">All Metals</option>
+                        <option value="Yellow Gold">18K Yellow Gold</option>
+                        <option value="White Gold">18K White Gold</option>
+                        <option value="Rose Gold">18K Rose Gold</option>
+                    </select>
+
+                    <!-- Price Filter -->
+                    <select id="filterPrice" class="filter-select" aria-label="Filter by Price">
+                        <option value="All">All Prices</option>
+                        <option value="under-1000">Under $1,000</option>
+                        <option value="1000-2500">$1,000 – $2,500</option>
+                        <option value="above-2500">Above $2,500</option>
+                    </select>
+
+                    <!-- Sort By -->
+                    <select id="sortBy" class="filter-select" aria-label="Sort products">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Filter Bar (Visible on mobile/tablet) -->
+        <div class="mobile-filter-bar">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <button id="openMobileFilterBtn" class="btn-open-filters" aria-label="Open Filter and Sort Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    <span>Filters & Sort</span>
+                    <span id="mobileFilterBadge" style="background: var(--color-gold); color: var(--color-teal-deep); border-radius: 50%; font-size: 0.65rem; width: 18px; height: 18px; display: none; align-items: center; justify-content: center; margin-left: 0.25rem;">0</span>
+                </button>
+                <span id="mobileProductCount" style="font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted);">14 pieces</span>
+            </div>
+        </div>
+
+        <!-- Mobile Filter Full-Screen Drawer -->
+        <div class="mobile-filter-drawer" id="mobileFilterDrawer">
+            <div class="mobile-filter-header">
+                <h3 style="font-size: 1.25rem; font-family: var(--font-serif);">Filters & Sort</h3>
+                <button id="closeMobileFilterBtn" class="mobile-drawer-close" aria-label="Close Filter Menu">&times;</button>
+            </div>
+            <div class="mobile-filter-body">
+                <!-- Category Group -->
+                <div class="mobile-filter-group">
+                    <div class="mobile-filter-group-title">Category</div>
+                    <div class="mobile-filter-options" id="mobileFilterCategories">
+                        <button class="mobile-filter-opt-btn active" data-filter="category" data-val="All">All Pieces</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Rings">Rings</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Necklaces">Necklaces</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Bracelets">Bracelets</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Earrings">Earrings</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Chains">Chains</button>
+                        <button class="mobile-filter-opt-btn" data-filter="category" data-val="Watches">Fine Watches</button>
+                    </div>
+                </div>
+
+                <!-- Metal Group -->
+                <div class="mobile-filter-group">
+                    <div class="mobile-filter-group-title">Metal & Purity</div>
+                    <div class="mobile-filter-options" id="mobileFilterMetals">
+                        <button class="mobile-filter-opt-btn active" data-filter="metal" data-val="All">All Metals</button>
+                        <button class="mobile-filter-opt-btn" data-filter="metal" data-val="Yellow Gold">18K Yellow Gold</button>
+                        <button class="mobile-filter-opt-btn" data-filter="metal" data-val="White Gold">18K White Gold</button>
+                        <button class="mobile-filter-opt-btn" data-filter="metal" data-val="Rose Gold">18K Rose Gold</button>
+                    </div>
+                </div>
+
+                <!-- Price Group -->
+                <div class="mobile-filter-group">
+                    <div class="mobile-filter-group-title">Price Range</div>
+                    <div class="mobile-filter-options" id="mobileFilterPrices">
+                        <button class="mobile-filter-opt-btn active" data-filter="price" data-val="All">All Prices</button>
+                        <button class="mobile-filter-opt-btn" data-filter="price" data-val="under-1000">Under $1,000</button>
+                        <button class="mobile-filter-opt-btn" data-filter="price" data-val="1000-2500">$1,000 – $2,500</button>
+                        <button class="mobile-filter-opt-btn" data-filter="price" data-val="above-2500">Above $2,500</button>
+                    </div>
+                </div>
+
+                <!-- Sort Group -->
+                <div class="mobile-filter-group">
+                    <div class="mobile-filter-group-title">Sort Order</div>
+                    <div class="mobile-filter-options" id="mobileFilterSorts">
+                        <button class="mobile-filter-opt-btn active" data-filter="sort" data-val="featured">Featured</button>
+                        <button class="mobile-filter-opt-btn" data-filter="sort" data-val="price-low">Price: Low to High</button>
+                        <button class="mobile-filter-opt-btn" data-filter="sort" data-val="price-high">Price: High to Low</button>
+                        <button class="mobile-filter-opt-btn" data-filter="sort" data-val="newest">Newest First</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-filter-footer">
+                <button id="mobileFilterClearBtn" class="btn btn-secondary">Reset</button>
+                <button id="mobileFilterApplyBtn" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+
+        <!-- Desktop Active Filter Summary Strip -->
+        <section style="padding: 1rem 0 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <span id="productCount" style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-text-muted);">Showing all pieces</span>
+                <button id="clearFiltersBtn" class="btn-text" style="display: none; font-size: 0.74rem;">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="section" style="padding-top: 1.5rem;">
+            <div class="container">
+                <div class="product-grid" id="shopProductGrid">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+                <!-- Empty State Container -->
+                <div id="shopEmptyState" class="empty-state" style="display: none;">
+                    <span class="eyebrow">NO MATCHES FOUND</span>
+                    <h3>A Rare Request</h3>
+                    <p>We could not find any pieces matching your chosen criteria. Our concierge is available to source or custom-craft bespoke commissions.</p>
+                    <button id="emptyResetBtn" class="btn btn-primary">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <img src="images/elmasa-logo.png" alt="ALMASA Jewelry" class="footer-brand-logo">
+                    <p class="footer-statement">ALMASA Jewelry is an independent haute joaillerie house dedicated to 18K solid gold creations of timeless emotional significance.</p>
+                    <p style="font-size: 0.8rem; color: var(--color-gold-light);"><span data-config="address">Rue Foch, Downtown Luxury District, Beirut</span></p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=Rings" class="footer-link">Rings</a></li>
+                        <li><a href="shop.html?category=Necklaces" class="footer-link">Necklaces</a></li>
+                        <li><a href="shop.html?category=Bracelets" class="footer-link">Bracelets</a></li>
+                        <li><a href="shop.html?category=Earrings" class="footer-link">Earrings</a></li>
+                        <li><a href="shop.html?category=Chains" class="footer-link">Chains</a></li>
+                        <li><a href="shop.html?category=Watches" class="footer-link">Fine Watches</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Private Concierge</a></li>
+                        <li><a href="about.html#craftsmanship" class="footer-link">18K Gold Standards</a></li>
+                        <li><a href="contact.html#showroom" class="footer-link">Showroom Appointments</a></li>
+                        <li><a href="#" data-config="whatsapp" class="footer-link">WhatsApp Inquiries</a></li>
+                        <li><a href="wishlist.html" class="footer-link">Saved Pieces</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>The Gazette</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 1rem;">Receive intimate private collection previews, salon invitations, and jewelry essays.</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </div>
+                        <span class="newsletter-msg"></span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> ALMASA Jewelry. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="about.html" class="footer-link">Brand Story</a>
+                    <a href="contact.html" class="footer-link">Concierge</a>
+                    <a href="#" data-config="instagram" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('shopProductGrid');
+            const emptyState = document.getElementById('shopEmptyState');
+            const categoryPills = document.querySelectorAll('.filter-pill');
+            const materialSelect = document.getElementById('filterMaterial');
+            const priceSelect = document.getElementById('filterPrice');
+            const sortSelect = document.getElementById('sortBy');
+            const countDisplay = document.getElementById('productCount');
+            const mobileCountDisplay = document.getElementById('mobileProductCount');
+            const clearBtn = document.getElementById('clearFiltersBtn');
+            const emptyResetBtn = document.getElementById('emptyResetBtn');
+
+            // Mobile filter drawer elements
+            const mobileFilterDrawer = document.getElementById('mobileFilterDrawer');
+            const openMobileFilterBtn = document.getElementById('openMobileFilterBtn');
+            const closeMobileFilterBtn = document.getElementById('closeMobileFilterBtn');
+            const mobileFilterClearBtn = document.getElementById('mobileFilterClearBtn');
+            const mobileFilterApplyBtn = document.getElementById('mobileFilterApplyBtn');
+            const mobileFilterBadge = document.getElementById('mobileFilterBadge');
+
+            // Current filter state
+            const urlParams = new URLSearchParams(window.location.search);
+            let activeCategory = urlParams.get('category') || 'All';
+            let activeMaterial = 'All';
+            let activePrice = 'All';
+            let activeSort = 'featured';
+            const initialCollection = urlParams.get('collection');
+            const initialFilter = urlParams.get('filter');
+
+            // Sync Desktop category pills
+            categoryPills.forEach(pill => {
+                if (pill.getAttribute('data-category').toLowerCase() === activeCategory.toLowerCase()) {
+                    categoryPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                }
+            });
+
+            if (initialCollection) {
+                document.getElementById('shopPageTitle').textContent = initialCollection;
+                document.getElementById('breadcrumbCurrent').textContent = initialCollection;
+            } else if (activeCategory !== 'All') {
+                document.getElementById('shopPageTitle').textContent = activeCategory;
+                document.getElementById('breadcrumbCurrent').textContent = activeCategory;
+            }
+
+            // Sync Mobile Drawer buttons
+            function syncMobileDrawerUI() {
+                document.querySelectorAll('.mobile-filter-opt-btn').forEach(btn => {
+                    const fType = btn.getAttribute('data-filter');
+                    const fVal = btn.getAttribute('data-val');
+                    let isActive = false;
+                    if (fType === 'category' && fVal.toLowerCase() === activeCategory.toLowerCase()) isActive = true;
+                    if (fType === 'metal' && fVal === activeMaterial) isActive = true;
+                    if (fType === 'price' && fVal === activePrice) isActive = true;
+                    if (fType === 'sort' && fVal === activeSort) isActive = true;
+                    btn.classList.toggle('active', isActive);
+                });
+
+                // Count active custom filters
+                let customFilterCount = 0;
+                if (activeCategory !== 'All') customFilterCount++;
+                if (activeMaterial !== 'All') customFilterCount++;
+                if (activePrice !== 'All') customFilterCount++;
+                if (activeSort !== 'featured') customFilterCount++;
+
+                if (mobileFilterBadge) {
+                    if (customFilterCount > 0) {
+                        mobileFilterBadge.style.display = 'inline-flex';
+                        mobileFilterBadge.textContent = customFilterCount;
+                    } else {
+                        mobileFilterBadge.style.display = 'none';
+                    }
+                }
+            }
+
+            function filterAndRender() {
+                let items = ProductsAPI.getAll();
+
+                // Collection filter (from URL)
+                if (initialCollection) {
+                    items = items.filter(p => p.collection.toLowerCase() === initialCollection.toLowerCase());
+                }
+
+                // New Arrivals filter (from URL)
+                if (initialFilter === 'new') {
+                    items = items.filter(p => p.badge && (p.badge.toLowerCase().includes('new') || p.badge.toLowerCase().includes('heirloom') || p.badge.toLowerCase().includes('signature')));
+                    document.getElementById('shopPageTitle').textContent = "New Arrivals";
+                    document.getElementById('breadcrumbCurrent').textContent = "New Arrivals";
+                }
+
+                // Category filter
+                if (activeCategory && activeCategory !== 'All') {
+                    items = items.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+                }
+
+                // Material filter
+                if (activeMaterial !== 'All') {
+                    items = items.filter(p => p.material.toLowerCase().includes(activeMaterial.toLowerCase()));
+                }
+
+                // Price filter
+                if (activePrice === 'under-1000') {
+                    items = items.filter(p => p.price && p.price < 1000);
+                } else if (activePrice === '1000-2500') {
+                    items = items.filter(p => p.price && p.price >= 1000 && p.price <= 2500);
+                } else if (activePrice === 'above-2500') {
+                    items = items.filter(p => p.price && p.price > 2500);
+                }
+
+                // Sort
+                if (activeSort === 'price-low') {
+                    items.sort((a, b) => (a.price || 0) - (b.price || 0));
+                } else if (activeSort === 'price-high') {
+                    items.sort((a, b) => (b.price || 0) - (a.price || 0));
+                } else if (activeSort === 'newest') {
+                    items.sort((a, b) => b.id - a.id);
+                }
+
+                // Render count
+                const countText = `${items.length} ${items.length === 1 ? 'piece' : 'pieces'} curated`;
+                if (countDisplay) countDisplay.textContent = countText;
+                if (mobileCountDisplay) mobileCountDisplay.textContent = `${items.length} pieces`;
+
+                const isFiltered = activeCategory !== 'All' || activeMaterial !== 'All' || activePrice !== 'All';
+                if (clearBtn) clearBtn.style.display = isFiltered ? 'inline-block' : 'none';
+
+                syncMobileDrawerUI();
+
+                if (items.length === 0) {
+                    grid.style.display = 'none';
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                emptyState.style.display = 'none';
+
+                grid.innerHTML = items.map(p => {
+                    const isWishlisted = WishlistAPI.isInWishlist(p.id);
+                    return `
+                        <div class="product-card">
+                            <div class="product-card-image-wrap">
+                                ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
+                                <button class="product-card-wishlist ${isWishlisted ? 'active' : ''}" data-id="${p.id}" aria-label="Save to Wishlist" title="Save to Wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                                <a href="product.html?id=${p.id}">
+                                    <img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
+                                </a>
+                                <div class="product-card-hover-actions">
+                                    <button class="btn-quick-add" data-id="${p.id}">Quick Add to Bag</button>
+                                </div>
+                            </div>
+                            <div class="product-card-info">
+                                <span class="product-card-category">${p.category} &bull; ${p.goldPurity}</span>
+                                <h4 class="product-card-title"><a href="product.html?id=${p.id}">${p.name}</a></h4>
+                                <span class="product-card-price">${ALMASA_CONFIG.currency.format(p.price)}</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Bind Quick Add
+                grid.querySelectorAll('.btn-quick-add').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = e.target.getAttribute('data-id');
+                        CartAPI.addToCart(id, 'Standard', 1);
+                    });
+                });
+
+                // Bind Wishlist Toggle
+                grid.querySelectorAll('.product-card-wishlist').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const btnEl = e.currentTarget;
+                        const id = btnEl.getAttribute('data-id');
+                        const added = WishlistAPI.toggle(id);
+                        btnEl.classList.toggle('active', added);
+                    });
+                });
+            }
+
+            // Desktop Category Pills
+            categoryPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    categoryPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    activeCategory = pill.getAttribute('data-category');
+                    document.getElementById('shopPageTitle').textContent = activeCategory === 'All' ? 'The Collection' : activeCategory;
+                    document.getElementById('breadcrumbCurrent').textContent = activeCategory === 'All' ? 'The Collection' : activeCategory;
+                    filterAndRender();
+                });
+            });
+
+            // Desktop Select Controls
+            materialSelect.addEventListener('change', () => {
+                activeMaterial = materialSelect.value;
+                filterAndRender();
+            });
+            priceSelect.addEventListener('change', () => {
+                activePrice = priceSelect.value;
+                filterAndRender();
+            });
+            sortSelect.addEventListener('change', () => {
+                activeSort = sortSelect.value;
+                filterAndRender();
+            });
+
+            // Mobile Drawer Button Listeners
+            document.querySelectorAll('.mobile-filter-opt-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const fType = btn.getAttribute('data-filter');
+                    const fVal = btn.getAttribute('data-val');
+                    const parent = btn.parentElement;
+                    parent.querySelectorAll('.mobile-filter-opt-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    if (fType === 'category') activeCategory = fVal;
+                    if (fType === 'metal') {
+                        activeMaterial = fVal;
+                        materialSelect.value = fVal;
+                    }
+                    if (fType === 'price') {
+                        activePrice = fVal;
+                        priceSelect.value = fVal;
+                    }
+                    if (fType === 'sort') {
+                        activeSort = fVal;
+                        sortSelect.value = fVal;
+                    }
+                });
+            });
+
+            // Open Mobile Filter Drawer
+            if (openMobileFilterBtn) {
+                openMobileFilterBtn.addEventListener('click', () => {
+                    syncMobileDrawerUI();
+                    mobileFilterDrawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            // Close Mobile Filter Drawer
+            const closeDrawer = () => {
+                mobileFilterDrawer.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            if (closeMobileFilterBtn) closeMobileFilterBtn.addEventListener('click', closeDrawer);
+
+            if (mobileFilterApplyBtn) {
+                mobileFilterApplyBtn.addEventListener('click', () => {
+                    // Update desktop pill state
+                    categoryPills.forEach(p => {
+                        p.classList.toggle('active', p.getAttribute('data-category').toLowerCase() === activeCategory.toLowerCase());
+                    });
+                    document.getElementById('shopPageTitle').textContent = activeCategory === 'All' ? 'The Collection' : activeCategory;
+                    document.getElementById('breadcrumbCurrent').textContent = activeCategory === 'All' ? 'The Collection' : activeCategory;
+                    filterAndRender();
+                    closeDrawer();
+                });
+            }
+
+            const resetAll = () => {
+                activeCategory = 'All';
+                activeMaterial = 'All';
+                activePrice = 'All';
+                activeSort = 'featured';
+
+                categoryPills.forEach(p => p.classList.remove('active'));
+                categoryPills[0].classList.add('active');
+                materialSelect.value = 'All';
+                priceSelect.value = 'All';
+                sortSelect.value = 'featured';
+
+                document.getElementById('shopPageTitle').textContent = 'The Collection';
+                document.getElementById('breadcrumbCurrent').textContent = 'The Collection';
+                filterAndRender();
+                closeDrawer();
+            };
+
+            if (clearBtn) clearBtn.addEventListener('click', resetAll);
+            if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+            if (mobileFilterClearBtn) mobileFilterClearBtn.addEventListener('click', resetAll);
+
+            // Initial render
+            filterAndRender();
+        });
+    </script>
+</body>
+</html>

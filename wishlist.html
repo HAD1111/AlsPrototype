@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Pieces | ALMASA Jewelry</title>
+    <meta name="description" content="View your personal wishlist of fine 18K gold creations at ALMASA Jewelry.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/elmasa-logo.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="ALMASA Jewelry Home">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="shop.html" class="nav-link">Collections</a></li>
+                    <li><a href="shop.html?filter=new" class="nav-link">New Arrivals</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="about.html#craftsmanship" class="nav-link">Journal</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn search-trigger" aria-label="Search Jewelry" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="wishlist.html" class="nav-action-btn" aria-label="View Wishlist" title="Saved Pieces">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="nav-action-badge wishlist-badge" id="wishlistBadge">0</span>
+                </a>
+                <a href="cart.html" class="nav-action-btn" aria-label="Shopping Bag" title="Shopping Bag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="nav-action-badge cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Open Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="nav-brand">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </div>
+            <button class="mobile-drawer-close" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="shop.html" class="mobile-nav-link">Collections</a></li>
+            <li><a href="shop.html?filter=new" class="mobile-nav-link">New Arrivals</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About ALMASA</a></li>
+            <li><a href="about.html#craftsmanship" class="mobile-nav-link">The Craftsmanship</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Private Concierge</a></li>
+            <li><a href="wishlist.html" class="mobile-nav-link active">Saved Pieces</a></li>
+            <li><a href="cart.html" class="mobile-nav-link">Shopping Bag</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <p>&copy; <span class="current-year"></span> ALMASA Jewelry.</p>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search fine jewelry, gold, stones..." autocomplete="off">
+                <button id="searchClose" class="search-close-btn" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchResultsArea" class="search-results-area"></div>
+        </div>
+    </div>
+
+    <main>
+        <section class="shop-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Saved Pieces</span>
+                </nav>
+                <span class="eyebrow">YOUR PERSONAL CURATION</span>
+                <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 300;">Saved Pieces</h1>
+                <p class="section-subtitle" style="max-width: 620px; margin: 0.75rem auto 0;">
+                    Your private selection of ALMASA creations, preserved for future milestones.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Wishlist Items Grid -->
+                <div class="product-grid" id="wishlistGrid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="wishlistEmptyState" class="empty-state" style="display: none;">
+                    <span class="eyebrow">YOUR WISHLIST IS EMPTY</span>
+                    <h3>Curate Your Heirlooms</h3>
+                    <p>You have not saved any pieces yet. Explore our 18K solid gold collections to curate your personal repertoire of timeless jewelry.</p>
+                    <a href="shop.html" class="btn btn-primary">Explore the Collection</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <img src="images/elmasa-logo.png" alt="ALMASA Jewelry" class="footer-brand-logo">
+                    <p class="footer-statement">ALMASA Jewelry is an independent haute joaillerie house dedicated to 18K solid gold creations of timeless emotional significance.</p>
+                    <p style="font-size: 0.8rem; color: var(--color-gold-light);"><span data-config="address">Rue Foch, Downtown Luxury District, Beirut</span></p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=Rings" class="footer-link">Rings</a></li>
+                        <li><a href="shop.html?category=Necklaces" class="footer-link">Necklaces</a></li>
+                        <li><a href="shop.html?category=Bracelets" class="footer-link">Bracelets</a></li>
+                        <li><a href="shop.html?category=Earrings" class="footer-link">Earrings</a></li>
+                        <li><a href="shop.html?category=Chains" class="footer-link">Chains</a></li>
+                        <li><a href="shop.html?category=Watches" class="footer-link">Fine Watches</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Private Concierge</a></li>
+                        <li><a href="about.html#craftsmanship" class="footer-link">18K Gold Standards</a></li>
+                        <li><a href="contact.html#showroom" class="footer-link">Showroom Appointments</a></li>
+                        <li><a href="#" data-config="whatsapp" class="footer-link">WhatsApp Inquiries</a></li>
+                        <li><a href="wishlist.html" class="footer-link">Saved Pieces</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>The Gazette</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 1rem;">Receive intimate private collection previews, salon invitations, and jewelry essays.</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </div>
+                        <span class="newsletter-msg"></span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> ALMASA Jewelry. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="about.html" class="footer-link">Brand Story</a>
+                    <a href="contact.html" class="footer-link">Concierge</a>
+                    <a href="#" data-config="instagram" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('wishlistGrid');
+            const emptyState = document.getElementById('wishlistEmptyState');
+
+            function renderWishlist() {
+                const ids = WishlistAPI.getWishlist();
+                const products = ids.map(id => ProductsAPI.getById(id)).filter(Boolean);
+
+                if (products.length === 0) {
+                    grid.style.display = 'none';
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                emptyState.style.display = 'none';
+
+                grid.innerHTML = products.map(p => `
+                    <div class="product-card">
+                        <div class="product-card-image-wrap">
+                            ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
+                            <button class="product-card-wishlist active" data-id="${p.id}" aria-label="Remove from Wishlist" title="Remove from Wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C6A267" stroke="#C6A267" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                            <a href="product.html?id=${p.id}">
+                                <img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
+                            </a>
+                            <div class="product-card-hover-actions">
+                                <button class="btn-quick-add move-to-bag-btn" data-id="${p.id}">Move to Bag</button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <span class="product-card-category">${p.category} &bull; ${p.goldPurity}</span>
+                            <h4 class="product-card-title"><a href="product.html?id=${p.id}">${p.name}</a></h4>
+                            <span class="product-card-price">${ALMASA_CONFIG.currency.format(p.price)}</span>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Bind move to bag
+                grid.querySelectorAll('.move-to-bag-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = e.target.getAttribute('data-id');
+                        CartAPI.addToCart(id, 'Standard', 1);
+                        WishlistAPI.remove(id);
+                        renderWishlist();
+                    });
+                });
+
+                // Bind remove
+                grid.querySelectorAll('.product-card-wishlist').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = e.currentTarget.getAttribute('data-id');
+                        WishlistAPI.remove(id);
+                        renderWishlist();
+                    });
+                });
+            }
+
+            renderWishlist();
+            window.addEventListener('almasa:wishlist-updated', renderWishlist);
+        });
+    </script>
+</body>
+</html>

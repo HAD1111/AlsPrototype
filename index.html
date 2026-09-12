@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMASA Jewelry | Haute Joaillerie & 18K Gold Heirlooms</title>
+    <meta name="description" content="ALMASA Jewelry creates thoughtfully crafted 18K gold pieces, designed to be worn now and treasured forever. Explore our fine jewelry collections.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/elmasa-logo.png">
+</head>
+<body>
+
+    <!-- Site Header & Sticky Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="ALMASA Jewelry Home">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="shop.html" class="nav-link">Collections</a></li>
+                    <li><a href="shop.html?filter=new" class="nav-link">New Arrivals</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="about.html#craftsmanship" class="nav-link">Journal</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn search-trigger" aria-label="Search Jewelry" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="wishlist.html" class="nav-action-btn" aria-label="View Wishlist" title="Saved Pieces">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="nav-action-badge wishlist-badge" id="wishlistBadge">0</span>
+                </a>
+                <a href="cart.html" class="nav-action-btn" aria-label="Shopping Bag" title="Shopping Bag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="nav-action-badge cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Open Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Full-Screen Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="nav-brand">
+                <img src="images/elmasa-logo.png" alt="ALMASA Emblem" class="nav-brand-logo">
+                <div class="nav-brand-text">
+                    <span class="nav-brand-title">ALMASA</span>
+                    <span class="nav-brand-sub">JEWELRY</span>
+                </div>
+            </div>
+            <button class="mobile-drawer-close" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="shop.html" class="mobile-nav-link">Collections</a></li>
+            <li><a href="shop.html?filter=new" class="mobile-nav-link">New Arrivals</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About ALMASA</a></li>
+            <li><a href="about.html#craftsmanship" class="mobile-nav-link">The Craftsmanship</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Private Concierge</a></li>
+            <li><a href="wishlist.html" class="mobile-nav-link">Saved Pieces</a></li>
+            <li><a href="cart.html" class="mobile-nav-link">Shopping Bag</a></li>
+        </ul>
+
+        <div class="mobile-drawer-footer">
+            <div class="mobile-drawer-contact">
+                <p>Private Showroom & Concierge</p>
+                <a href="#" data-config="phone">+961 1 985 420</a>
+                <a href="#" data-config="whatsapp">WhatsApp Concierge</a>
+            </div>
+            <p>&copy; <span class="current-year"></span> ALMASA Jewelry. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Live Search Overlay Drawer -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search fine jewelry, gold, stones..." autocomplete="off">
+                <button id="searchClose" class="search-close-btn" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchResultsArea" class="search-results-area">
+                <p class="search-empty-text">Type a collection, piece, or category name...</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Cinematic Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-wrapper">
+                <img src="images/editorial-hero-campaign.jpg" alt="ALMASA High Jewelry Mediterranean Campaign" class="hero-bg-img" fetchpriority="high">
+            </div>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <span class="eyebrow eyebrow-light">HAUTE JOAILLERIE &bull; 18K SOLID GOLD</span>
+                <h1 class="hero-title">Jewelry for the moments that become heirlooms.</h1>
+                <p class="hero-subtitle">Thoughtfully crafted 18K gold pieces, designed to be worn now and treasured forever.</p>
+                <div class="hero-ctas">
+                    <a href="shop.html" class="btn btn-gold">Explore the Collection</a>
+                    <a href="contact.html" class="btn btn-outline-light">Book a Private Consultation</a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <span>SCROLL</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Trust Strip -->
+        <section class="trust-strip">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                        <h4 class="trust-title">18K Solid Gold</h4>
+                        <p class="trust-desc">Pure 750 gold purity certified by national hallmark authorities.</p>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <h4 class="trust-title">Crafted with Care</h4>
+                        <p class="trust-desc">Artisanal hand-finishing, precision stone setting, and fluid comfort.</p>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <h4 class="trust-title">Authenticity Guaranteed</h4>
+                        <p class="trust-desc">Accompanied by an official ALMASA Certificate of Authenticity.</p>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <h4 class="trust-title">Personalized Service</h4>
+                        <p class="trust-desc">Direct private consultation via WhatsApp and bespoke showroom viewings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">CURATED SUITES</span>
+                    <h2 class="section-title">The Collections</h2>
+                    <p class="section-subtitle">Each signature collection reflects a distinct chapter of fine Mediterranean jewelry craftsmanship.</p>
+                    <div class="gold-line"></div>
+                </div>
+
+                <div class="collections-grid">
+                    <!-- Everyday Gold -->
+                    <a href="shop.html?collection=Everyday+Gold" class="collection-card">
+                        <img src="images/item-laurel-bracelet.jpg" alt="Everyday Gold Collection" class="collection-card-bg" loading="lazy">
+                        <div class="collection-card-overlay"></div>
+                        <div class="collection-card-content">
+                            <span class="eyebrow eyebrow-light">SIGNATURE SERIES</span>
+                            <h3 class="collection-card-title">Everyday Gold</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Sensual, comfortable solid gold jewelry designed for effortless daily elegance.</p>
+                            <span class="collection-card-link">Explore Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Timeless Romance -->
+                    <a href="shop.html?collection=Timeless+Romance" class="collection-card">
+                        <img src="images/product-necklace-2.jpg" alt="Timeless Romance Collection" class="collection-card-bg" loading="lazy">
+                        <div class="collection-card-overlay"></div>
+                        <div class="collection-card-content">
+                            <span class="eyebrow eyebrow-light">EMOTIONAL HEIRLOOMS</span>
+                            <h3 class="collection-card-title">Timeless Romance</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Sculpted motifs and entwined symbols honoring indelible connections.</p>
+                            <span class="collection-card-link">Explore Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Statement Pieces -->
+                    <a href="shop.html?collection=Statement+Pieces" class="collection-card">
+                        <img src="images/item-serpentine-necklace.jpg" alt="Statement Pieces Collection" class="collection-card-bg" loading="lazy">
+                        <div class="collection-card-overlay"></div>
+                        <div class="collection-card-content">
+                            <span class="eyebrow eyebrow-light">HIGH JEWELRY</span>
+                            <h3 class="collection-card-title">Statement Pieces</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Tubogas ribbing, brilliant diamonds, and magnetic architectural silhouettes.</p>
+                            <span class="collection-card-link">Explore Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Bridal & Gifts -->
+                    <a href="shop.html?collection=Bridal+%26+Gifts" class="collection-card">
+                        <img src="images/product-set-2.jpg" alt="Bridal and Gifts Collection" class="collection-card-bg" loading="lazy">
+                        <div class="collection-card-overlay"></div>
+                        <div class="collection-card-content">
+                            <span class="eyebrow eyebrow-light">CEREMONIAL SUITES</span>
+                            <h3 class="collection-card-title">Bridal & Gifts</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Harmonious parures and keepsake creations to commemorate monumental days.</p>
+                            <span class="collection-card-link">Explore Collection &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Pieces Grid -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">HANDPICKED EDITIONS</span>
+                    <h2 class="section-title">Signature Pieces</h2>
+                    <p class="section-subtitle">Exemplars of ALMASA goldsmithing, balanced in proportion and radiant in 18K solid gold.</p>
+                    <div class="gold-line"></div>
+                </div>
+
+                <div class="product-grid" id="homeFeaturedGrid">
+                    <!-- Populated dynamically by script from ProductsAPI.getFeatured() -->
+                </div>
+
+                <div style="text-align: center; margin-top: 3.5rem;">
+                    <a href="shop.html" class="btn btn-primary">View Full Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story Split Section -->
+        <section class="section">
+            <div class="container">
+                <div class="editorial-split">
+                    <div class="editorial-img-container">
+                        <img src="images/product-necklace-1.jpg" alt="ALMASA Woman and Gold Pendant Mirror Reflection" class="editorial-img" loading="lazy">
+                        <div class="editorial-quote-badge">
+                            &ldquo;Gold does not fade; neither should the memories it seals.&rdquo;
+                        </div>
+                    </div>
+                    <div class="editorial-copy">
+                        <span class="eyebrow">OUR HERITAGE</span>
+                        <h2>Made to be part of your story.</h2>
+                        <div class="gold-line gold-line-left"></div>
+                        <p>At ALMASA, jewelry is never conceived as ephemeral ornamentation. Shaped by Mediterranean heritage and the warmth of ancient goldsmith traditions, each creation is sculpted in noble 18K solid gold to accompany life&rsquo;s most intimate milestones.</p>
+                        <p>From private triumphs and anniversary vows to quiet moments of personal grace, our pieces are imbued with meaning—crafted with structural integrity and ergonomic comfort so they can be worn effortlessly today, and passed down as cherished family heirlooms tomorrow.</p>
+                        <div style="margin-top: 2rem;">
+                            <a href="about.html" class="btn btn-secondary">Discover ALMASA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Craftsmanship Section -->
+        <section class="section section-alt" id="craftsmanship">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">ATELIER STANDARDS</span>
+                    <h2 class="section-title">The Art of Fine Craftsmanship</h2>
+                    <p class="section-subtitle">Every curve, joint, and prong is executed with meticulous care to honor the dignity of 18K gold.</p>
+                    <div class="gold-line"></div>
+                </div>
+
+                <div class="editorial-split" style="align-items: center; margin-bottom: 4rem;">
+                    <div class="editorial-copy">
+                        <h3>Mastery at the Bench</h3>
+                        <p>True luxury reveals itself in the unseen: the hand-polished inner bevels that glide across the skin, the balanced heft of solid gold rather than hollow impressions, and the microscopic precision of diamond settings aligned to capture light from every angle.</p>
+                        <p>Our artisans combine age-old Mediterranean goldsmithing with modern calibrated stone setting, ensuring each creation retains its beauty and structural resilience through generations of daily wear.</p>
+                    </div>
+                    <div class="editorial-img-container">
+                        <img src="images/editorial-craftsmanship.jpg" alt="Master Goldsmith Hand Setting Diamonds in 18K Gold" class="editorial-img" style="aspect-ratio: 4/3;" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="craftsmanship-grid">
+                    <div class="craftsmanship-card">
+                        <span class="craftsmanship-number">01</span>
+                        <h3>750 Gold Purity</h3>
+                        <p>We work exclusively in 18K solid gold—an ideal alloy of 75% pure gold, precisely balanced with noble alloys to achieve the signature warm champagne hue and enduring tensile strength.</p>
+                    </div>
+                    <div class="craftsmanship-card">
+                        <span class="craftsmanship-number">02</span>
+                        <h3>Ergonomic Comfort</h3>
+                        <p>Jewelry must feel as divine against the skin as it looks in the mirror. Every ring shank and bangle is contoured with comfort-fit curves to ensure effortless all-day wear.</p>
+                    </div>
+                    <div class="craftsmanship-card">
+                        <span class="craftsmanship-number">03</span>
+                        <h3>Heirloom Longevity</h3>
+                        <p>Our pieces undergo rigorous tension tests and clasp calibration before leaving the atelier, accompanied by complimentary lifetime cleaning and inspection guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Consultation Section -->
+        <section class="consultation-section">
+            <div class="container">
+                <div class="consultation-inner">
+                    <span class="eyebrow eyebrow-light">PRIVATE CLIENT SERVICES</span>
+                    <h2>A more personal way to choose jewelry.</h2>
+                    <div class="gold-line"></div>
+                    <p>Whether you are seeking guidance on ring sizing, curating a harmonious wedding parure, or commissioning a bespoke anniversary gift, our dedicated private advisors offer intimate styling guidance and direct assistance.</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" data-config="whatsapp" class="btn btn-gold" target="_blank" rel="noopener">Speak with an Advisor</a>
+                        <a href="contact.html" class="btn btn-outline-light">Book Showroom Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Gallery Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">THE ATELIER JOURNAL</span>
+                    <h2 class="section-title">Moments in Gold</h2>
+                    <p class="section-subtitle">Visual impressions of ALMASA creations captured in natural Mediterranean sunlight.</p>
+                    <div class="gold-line"></div>
+                </div>
+
+                <div class="editorial-gallery-grid">
+                    <div class="editorial-gallery-item">
+                        <img src="images/item-serpentine-ring.jpg" alt="Aurelia Serpentine Ring in Gold and Diamonds" loading="lazy">
+                    </div>
+                    <div class="editorial-gallery-item">
+                        <img src="images/editorial-packaging.jpg" alt="Signature ALMASA Teal Presentation Box" loading="lazy">
+                    </div>
+                    <div class="editorial-gallery-item">
+                        <img src="images/item-laurel-necklace.jpg" alt="Laurel Leaf Chevron Gold Necklace" loading="lazy">
+                    </div>
+                    <div class="editorial-gallery-item">
+                        <img src="images/item-milanese-watch.jpg" alt="18K Gold Milanese Diamond Watch" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <img src="images/elmasa-logo.png" alt="ALMASA Jewelry" class="footer-brand-logo">
+                    <p class="footer-statement">ALMASA Jewelry is an independent haute joaillerie house dedicated to 18K solid gold creations of timeless emotional significance.</p>
+                    <p style="font-size: 0.8rem; color: var(--color-gold-light);"><span data-config="address">Rue Foch, Downtown Luxury District, Beirut</span></p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=Rings" class="footer-link">Rings</a></li>
+                        <li><a href="shop.html?category=Necklaces" class="footer-link">Necklaces</a></li>
+                        <li><a href="shop.html?category=Bracelets" class="footer-link">Bracelets</a></li>
+                        <li><a href="shop.html?category=Earrings" class="footer-link">Earrings</a></li>
+                        <li><a href="shop.html?category=Chains" class="footer-link">Chains</a></li>
+                        <li><a href="shop.html?category=Watches" class="footer-link">Fine Watches</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Private Concierge</a></li>
+                        <li><a href="about.html#craftsmanship" class="footer-link">18K Gold Standards</a></li>
+                        <li><a href="contact.html#showroom" class="footer-link">Showroom Appointments</a></li>
+                        <li><a href="#" data-config="whatsapp" class="footer-link">WhatsApp Inquiries</a></li>
+                        <li><a href="wishlist.html" class="footer-link">Saved Pieces</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>The Gazette</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 1rem;">Receive intimate private collection previews, salon invitations, and jewelry essays.</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </div>
+                        <span class="newsletter-msg"></span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> ALMASA Jewelry. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="about.html" class="footer-link">Brand Story</a>
+                    <a href="contact.html" class="footer-link">Concierge</a>
+                    <a href="#" data-config="instagram" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Populate featured pieces on homepage
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('homeFeaturedGrid');
+            if (!grid || typeof ProductsAPI === 'undefined') return;
+
+            const featured = ProductsAPI.getFeatured(6);
+            grid.innerHTML = featured.map(p => {
+                const isWishlisted = WishlistAPI.isInWishlist(p.id);
+                return `
+                    <div class="product-card">
+                        <div class="product-card-image-wrap">
+                            ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
+                            <button class="product-card-wishlist ${isWishlisted ? 'active' : ''}" data-id="${p.id}" aria-label="Save to Wishlist" title="Save to Wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                            <a href="product.html?id=${p.id}">
+                                <img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
+                            </a>
+                            <div class="product-card-hover-actions">
+                                <button class="btn-quick-add" data-id="${p.id}">Quick Add to Bag</button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <span class="product-card-category">${p.category}</span>
+                            <h4 class="product-card-title"><a href="product.html?id=${p.id}">${p.name}</a></h4>
+                            <span class="product-card-price">${ALMASA_CONFIG.currency.format(p.price)}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Bind quick add and wishlist events
+            grid.querySelectorAll('.btn-quick-add').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = e.target.getAttribute('data-id');
+                    CartAPI.addToCart(id, 'Standard', 1);
+                });
+            });
+
+            grid.querySelectorAll('.product-card-wishlist').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const btnEl = e.currentTarget;
+                    const id = btnEl.getAttribute('data-id');
+                    const added = WishlistAPI.toggle(id);
+                    btnEl.classList.toggle('active', added);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
